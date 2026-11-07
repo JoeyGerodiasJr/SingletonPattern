@@ -1,17 +1,11 @@
-package singletonPattern;
-
-
 public class HelpDeskStation {
+    private int stationNumber;
 
-    private final int stationNumber;
-
-    public HelpDeskStation(int stationNumber) {
+       public HelpDeskStation(int stationNumber) {
         this.stationNumber = stationNumber;
     }
-
-
     public void resetQueue(int newNumber) {
         QueueManager.getInstance().resetQueue(newNumber);
-        System.out.println("Station " + stationNumber + " reset the queue to " + newNumber + ".");
+        System.out.println("[Station " + stationNumber + "] Queue reset to: " + newNumber);
     }
 }
